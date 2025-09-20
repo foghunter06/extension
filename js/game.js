@@ -926,14 +926,15 @@ function _typeof(app) {
       }).catch(function (app) {});
     }
     ;
-    var _0x303639 = PIXI.Texture.from("https://wormx.store/get_store.php?item=open_q.png");
-    var _0x2e8e3b = PIXI.Texture.from("https://wormx.store/get_store.php?item=close_w.png");
-    var _0x424b10 = PIXI.Texture.from("https://wormx.store/get_store.php?item=open_w.png");
-    var _0x5e5179 = PIXI.Texture.from("https://wormx.store/get_store.php?item=close_z.png");
-    var _0x430786 = PIXI.Texture.from( "https://wormx.store/get_store.php?item=open_z.png");
-    var _0x4e076d = PIXI.Texture.from("https://wormx.store/get_store.php?item=z_i.png");
-    var _0x1fa04e = PIXI.Texture.from("https://wormx.store/get_store.php?item=z_o.png");
-    var _0x1cbe84 = new PIXI.Sprite(_0x303639);
+    var _0x36057d = PIXI.Texture.from(_0x442777.s_l + "/get_store.php?item=close_q.png");
+    var _0x303639 = PIXI.Texture.from(_0x442777.s_l + "/get_store.php?item=open_q.png");
+    var _0x2e8e3b = PIXI.Texture.from(_0x442777.s_l + "/get_store.php?item=close_w.png");
+    var _0x424b10 = PIXI.Texture.from(_0x442777.s_l + "/get_store.php?item=open_w.png");
+    var _0x5e5179 = PIXI.Texture.from(_0x442777.s_l + "/get_store.php?item=close_z.png");
+    var _0x430786 = PIXI.Texture.from(_0x442777.s_l + "/get_store.php?item=open_z.png");
+    var _0x4e076d = PIXI.Texture.from(_0x442777.s_l + "/get_store.php?item=z_i.png");
+    var _0x1fa04e = PIXI.Texture.from(_0x442777.s_l + "/get_store.php?item=z_o.png");
+    var _0x1cbe84 = new PIXI.Sprite(_0x36057d);
     _0x1cbe84.buttonMode = true;
     _0x1cbe84.anchor.set(0.5);
     _0x1cbe84.x = -65;
@@ -978,23 +979,23 @@ function _typeof(app) {
       fill: "#fff009",
       fontSize: 12
     });
-    mapText.anchor.x = 0.5;
-    mapText.position.x = 110;
-    var gameContainer = document.getElementById("game-cont");
-    var gameView = document.getElementById("game-view");
-    var gameModeParams = $("#mm-params-game-mode");
-    app.d.getElementById("game-wrap").style.display = "block";
-    (function (app, config, utils) {
-      function hexByte(app, config) {
-        return _typeof(app) === config;
+    _0x9cbf8.anchor.x = 0.5;
+    _0x9cbf8.position.x = 110;
+    var _0xa2b5b9 = document.getElementById("game-cont");
+    var _0x5bb4d9 = document.getElementById("game-view");
+    var _0x4974de = $("#mm-params-game-mode");
+    _0x1fc431.d.getElementById("game-wrap").style.display = "block";
+    (function (_0x50f330, _0x1cd4d9, _0x1a06cf) {
+      function _0x2042c4(_0x32b5f9, _0xcf4334) {
+        return _typeof(_0x32b5f9) === _0xcf4334;
       }
-      function gameSettings() {
-        if (_typeof(config.createElement) != "function") {
-          return config.createElement(arguments[0]);
-        } else if (updateJoystickPosition) {
-          return config.createElementNS.call(config, "http://www.w3.org/2000/svg", arguments[0]);
+      function _0x4b87ab() {
+        if (_typeof(_0x1cd4d9.createElement) != "function") {
+          return _0x1cd4d9.createElement(arguments[0]);
+        } else if (_0x3275b7) {
+          return _0x1cd4d9.createElementNS.call(_0x1cd4d9, "http://www.w3.org/2000/svg", arguments[0]);
         } else {
-          return config.createElement.apply(config, arguments);
+          return _0x1cd4d9.createElement.apply(_0x1cd4d9, arguments);
         }
       }
       var savedGame = [];
