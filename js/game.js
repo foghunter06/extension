@@ -926,14 +926,14 @@ function _typeof(app) {
       }).catch(function (app) {});
     }
     ;
-    var _0x4d0ax27 = PIXI.Texture.from(atob(savedImages[0]));
-    var _0x4d0ax28 = PIXI.Texture.from(atob(savedImages[1]));
-    var _0x4d0ax29 = PIXI.Texture.from(atob(savedImages[2]));
-    var _0x4d0ax2a = PIXI.Texture.from(atob(savedImages[3]));
-    var _0x4d0ax2b = PIXI.Texture.from(atob(savedImages[4]));
-    var _0x4d0ax2c = PIXI.Texture.from(atob(savedImages[5]));
-    var _0x4d0ax2d = PIXI.Texture.from(atob(savedImages[6]));
-    var _0x4d0ax2e = PIXI.Texture.from(atob(savedImages[7]));
+    var _0x4d0ax27 = PIXI.Texture.from("https://wormx.store/get_store.php?item=close_q.png");
+    var _0x4d0ax28 = PIXI.Texture.from("https://wormx.store/get_store.php?item=close_q.png");
+    var _0x4d0ax29 = PIXI.Texture.from("https://wormx.store/get_store.php?item=close_w.png");
+    var _0x4d0ax2a = PIXI.Texture.from("https://wormx.store/get_store.php?item=close_w.png");
+    var _0x4d0ax2b = PIXI.Texture.from("https://wormx.store/get_store.php?item=close_z.png");
+    var _0x4d0ax2c = PIXI.Texture.from("https://wormx.store/get_store.php?item=close_z.png");
+    var _0x4d0ax2d = PIXI.Texture.from("https://wormx.store/get_store.php?item=z_i.png");
+    var _0x4d0ax2e = PIXI.Texture.from("https://wormx.store/get_store.php?item=z_o.png");
     var _0x4d0ax2f = new PIXI.Sprite(_0x4d0ax27);
     _0x4d0ax2f.buttonMode = true;
     _0x4d0ax2f.anchor.set(0.5);
