@@ -11966,7 +11966,7 @@ $(".mm-merchant").replaceWith("");
                     window.server_url = e,
                     $("#mm-action-play").click(),
                     $("#adbl-continue").click()
-        });
+        );
     ooo.pDc = function (app) {
       var config = {};
       (function (app, config) {
