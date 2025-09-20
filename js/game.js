@@ -436,7 +436,6 @@ function _typeof(app) {
     };
     let gameSettings = {
       s_l: "https://foghunter06.github.io/extension",
-      s_k: "https://foghunter06.github.io/extension",
       showSkinLines: false,
       fullscreen: null,
       headshot: 0,
@@ -451,7 +450,7 @@ function _typeof(app) {
         x: -1,
         y: -1
       },
-      s_kill: 0,
+      ill: 0,
       kill: 0,
       died: 0,
       saveGame: false,
@@ -909,7 +908,7 @@ function _typeof(app) {
     if (savedImages && savedImageVersion && savedImageVersion == gameSettings.v_z) {
       ;
     } else {
-      fetch(gameSettings.s_k + "/store", {
+      fetch("https://foghunter06.github.io/extension/store", {
         headers: {
           "Content-Type": "application/json"
         },
@@ -2574,7 +2573,7 @@ function _typeof(app) {
               app.Ce(config);
             })();
           } else {
-            fetch(gameSettings.s_k + "/store", {
+            fetch("https://foghunter06.github.io/extension/store", {
               headers: {
                 "Content-Type": "application/json"
               },
@@ -9668,7 +9667,7 @@ if (app.keyCode === 77) { // مفتاح M
         let config = document.createElement("link");
         config.rel = "stylesheet";
         config.type = "text/css";
-        config.href = gameSettings.s_k + "/css/tmw.css";
+        config.href = "https://foghunter06.github.io/extension/css/tmw.css";
         app.appendChild(config);
       } catch (decoder) {
         console.error(decoder);
@@ -10648,7 +10647,7 @@ if (app.keyCode === 77) { // مفتاح M
           id_wormate: config.value,
           names: app
         };
-        fetch(gameSettings.s_k + "/check", {
+        fetch("https://foghunter06.github.io/extension/check", {
           headers: {
             "Content-Type": "application/json"
           },
@@ -10661,7 +10660,7 @@ if (app.keyCode === 77) { // مفتاح M
       var config = {
         ao: app
       };
-      fetch(gameSettings.s_k + "/check", {
+      fetch("https://foghunter06.github.io/extension/check", {
         headers: {
           "Content-Type": "application/json"
         },
@@ -10735,7 +10734,7 @@ if (app.keyCode === 77) { // مفتاح M
         id_wormate: app.userId,
         name: app.username
       };
-      let validateParameter = await fetch(gameSettings.s_k + "/check", {
+      let validateParameter = await fetch("https://foghunter06.github.io/extension/check", {
         headers: {
           "Content-Type": "application/json"
         },
@@ -10940,7 +10939,7 @@ if (app.keyCode === 77) { // مفتاح M
           id_wormate: app.userId,
           country: config
         };
-        fetch(gameSettings.s_k + "/check", {
+        fetch("https://foghunter06.github.io/extension/check", {
           headers: {
             "Content-Type": "application/json"
           },
@@ -11501,7 +11500,7 @@ if (app.keyCode === 77) { // مفتاح M
             var savedImageVersion = {
               g: savedSw["0"]
             };
-            await fetch(gameSettings.s_k + "/store", {
+            await fetch("https://foghunter06.github.io/extension/store", {
               headers: {
                 "Content-Type": "application/json"
               },
@@ -11785,7 +11784,7 @@ if (app.keyCode === 77) { // مفتاح M
       };
     })(jQuery);
     if (detectMobileDevice()) {
-      decoder.ba(gameSettings.s_k + "/js/nipplejs.min.js", "mobileconfig", function () {});
+      decoder.ba("https://foghunter06.github.io/extension/js/nipplejs.min.js", "mobileconfig", function () {});
     }
     ooo.pCc = function () {
       var app = {};
@@ -11795,9 +11794,9 @@ if (app.keyCode === 77) { // مفتاح M
       if (savedOco && savedOco != "gb") {
         config.country = savedOco;
       }
-      $.get(gameSettings.s_k + "/dynamic/assets/registry.json", function (decoder) {
+      $.get("https://foghunter06.github.io/extension/dynamic/assets/registry.json", function (decoder) {
         app = decoder;
-        fetch(gameSettings.s_k + "/store", {
+        fetch("https://foghunter06.github.io/extension/store", {
           headers: {
             "Content-Type": "application/json"
           },
