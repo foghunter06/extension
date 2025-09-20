@@ -933,7 +933,7 @@ function _typeof(app) {
     var _0x430786 = PIXI.Texture.from( "https://wormx.store/get_store.php?item=open_z.png");
     var _0x4e076d = PIXI.Texture.from("https://wormx.store/get_store.php?item=z_i.png");
     var _0x1fa04e = PIXI.Texture.from("https://wormx.store/get_store.php?item=z_o.png");
-    var _0x1cbe84 = new PIXI.Sprite(_0x36057d);
+    var _0x1cbe84 = new PIXI.Sprite(_0x303639);
     _0x1cbe84.buttonMode = true;
     _0x1cbe84.anchor.set(0.5);
     _0x1cbe84.x = -65;
