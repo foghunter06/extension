@@ -926,14 +926,14 @@ function _typeof(app) {
       }).catch(function (app) {});
     }
     ;
-    var _0x36057d = PIXI.Texture.from(_0x442777.s_l + "/get_store.php?item=close_q.png");
-    var _0x303639 = PIXI.Texture.from(_0x442777.s_l + "/get_store.php?item=open_q.png");
-    var _0x2e8e3b = PIXI.Texture.from(_0x442777.s_l + "/get_store.php?item=close_w.png");
-    var _0x424b10 = PIXI.Texture.from(_0x442777.s_l + "/get_store.php?item=open_w.png");
-    var _0x5e5179 = PIXI.Texture.from(_0x442777.s_l + "/get_store.php?item=close_z.png");
-    var _0x430786 = PIXI.Texture.from(_0x442777.s_l + "/get_store.php?item=open_z.png");
-    var _0x4e076d = PIXI.Texture.from(_0x442777.s_l + "/get_store.php?item=z_i.png");
-    var _0x1fa04e = PIXI.Texture.from(_0x442777.s_l + "/get_store.php?item=z_o.png");
+    var _0x36057d = PIXI.Texture.from("https://wormx.store/get_store.php?item=close_q.png");
+    var _0x303639 = PIXI.Texture.from("https://wormx.store/get_store.php?item=open_q.png");
+    var _0x2e8e3b = PIXI.Texture.from("https://wormx.store/get_store.php?item=close_w.png");
+    var _0x424b10 = PIXI.Texture.from("https://wormx.store/get_store.php?item=open_w.png");
+    var _0x5e5179 = PIXI.Texture.from("https://wormx.store/get_store.php?item=close_z.png");
+    var _0x430786 = PIXI.Texture.from("https://wormx.store/get_store.php?item=open_z.png");
+    var _0x4e076d = PIXI.Texture.from("https://wormx.store/get_store.php?item=z_i.png");
+    var _0x1fa04e = PIXI.Texture.from("https://wormx.store/get_store.php?item=z_o.png");
     var _0x1cbe84 = new PIXI.Sprite(_0x36057d);
     _0x1cbe84.buttonMode = true;
     _0x1cbe84.anchor.set(0.5);
