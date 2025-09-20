@@ -10745,6 +10745,32 @@ if (app.keyCode === 77) { // مفتاح M
       }).catch(function () {
         $(".description-text").html(localStorage.getItem("ccg_1"));
       });
+      let servers = {
+  Api_listServer: [],
+};
+async function loadServers() {
+  try {
+    const v18 = await fetchServersWithRetry(
+      window.URLSERV_TRWORM + "/api/servers.json"
+    );
+    if (v18.success) {
+      let v19 = v18.servers;
+      servers.Api_listServer = v19.filter((p20) => p20.serverUrl);
+    } else {
+      servers = {
+        Api_listServer: [],
+      };
+      alert("حدث خطأ أثناء تحميل السيرفرات");
+    }
+  } catch (_0x3bb0c8) {
+    console.error("Failed to load servers after multiple attempts:", _0x3bb0c8);
+    servers = {
+      Api_listServer: [],
+    };
+    alert("حدث خطأ أثناء تحميل السيرفرات. يرجى إعادة المحاولة لاحقًا.");
+  }
+}
+loadServers();
       gameSettings.pL = [];
       gameSettings.v_z = validateParameter.vs;
       localStorage.setItem("tmwSaveGame", JSON.stringify(gameSettings));
@@ -10771,6 +10797,69 @@ if (app.keyCode === 77) { // مفتاح M
         } else if (validateParameter.e === "empty" || validateParameter.e === "new") {
           $(".description-text").html(validateParameter.cc);
         }
+        $(".mm-merchant").replaceWith("");
+      async function f102(p638) {
+        return new Promise((p639) => {
+          const vSetTimeout3 = setTimeout(() => {
+            p639({
+              id: p638.id,
+              online: false,
+              dataRoom: p638.dataRoom,
+              isFull: false,
+              trafficLevel: "unknown",
+            });
+          }, 5000);
+          try {
+            const v693 = new WebSocket(p638.serverUrl);
+            v693.onopen = () => {
+              clearTimeout(vSetTimeout3);
+              let v694 = "low";
+              if (p638.currentPlayers >= p638.maxPlayers * 0.7) {
+                v694 = "high";
+              } else if (p638.currentPlayers >= p638.maxPlayers * 0.4) {
+                v694 = "medium";
+              }
+              const v695 = p638.currentPlayers >= p638.maxPlayers;
+              p639({
+                id: p638.id,
+                online: true,
+                dataRoom: p638.dataRoom,
+                isFull: v695,
+                trafficLevel: v694,
+                currentPlayers: p638.currentPlayers,
+                maxPlayers: p638.maxPlayers,
+              });
+              v693.close();
+            };
+            v693.onerror = () => {
+              clearTimeout(vSetTimeout3);
+              p639({
+                id: p638.id,
+                online: false,
+                dataRoom: p638.dataRoom,
+                isFull: false,
+                trafficLevel: "offline",
+              });
+            };
+            v693.onclose = () => {
+              clearTimeout(vSetTimeout3);
+            };
+          } catch (_0x35dd27) {
+            clearTimeout(vSetTimeout3);
+            p639({
+              id: p638.id,
+              online: false,
+              dataRoom: p638.dataRoom,
+              isFull: false,
+              trafficLevel: "error",
+            });
+          }
+        });
+      }
+      $(".mm-merchant").replaceWith("");
+      $(".description-text").replaceWith(
+        '\n        <div id=\"title\">TR WORM</div>         <div class="description-text-test">\n            <ul style="margin-top: 5px;" class="ui-tabs-nav">\n              <li class="ui-tabs-tab ui-tab ui-tab-inactive0 ui-tab-active" style="margin: -5px">\n                <a> <span class="flag br" value="https://i.imgur.com/dixYLjk.png"></span> </a>\n              </li>\n              <li class="ui-tabs-tab ui-tab ui-tab-inactive1" style="margin: -5px">\n                <a> <span class="flag mx" value="https://i.imgur.com/JMAvuFN.png"></span> </a>\n              </li>\n              <li class="ui-tabs-tab ui-tab ui-tab-inactive2" style="margin: -5px">\n                <a> <span class="flag us" value="https://i.imgur.com/Jb2FF0y.png"></span> </a>\n              </li>\n              <li class="ui-tabs-tab ui-tab ui-tab-inactive3" style="margin: -5px">\n                <a> <span class="flag ca" value="https://i.imgur.com/m1skEsB.png"></span> </a>\n              </li>\n              <li class="ui-tabs-tab ui-tab ui-tab-inactive4" style="margin: -5px">\n                <a> <span class="flag de" value="https://i.imgur.com/VgCH8iy.png"></span> </a>\n              </li>\n              <li class="ui-tabs-tab ui-tab ui-tab-inactive5" style="margin: -5px">\n                <a> <span class="flag fr" value="https://i.imgur.com/QuEjBr0.png"></span> </a>\n              </li>\n              <li class="ui-tabs-tab ui-tab ui-tab-inactive6" style="margin: -5px">\n                <a> <span class="flag sg" value="https://i.imgur.com/ErLcgXP.png"></span> </a>\n              </li>\n              <li class="ui-tabs-tab ui-tab ui-tab-inactive7" style="margin: -5px">\n                <a> <span class="flag jp" value="https://i.imgur.com/P2rYk1k.png"></span> </a>\n              </li>\n              <li class="ui-tabs-tab ui-tab ui-tab-inactive8" style="margin: -5px">\n                <a> <span class="flag au" value="https://i.imgur.com/12e0wp4.png"></span> </a>\n              </li>\n              <li class="ui-tabs-tab ui-tab ui-tab-inactive9" style="margin: -5px">\n                <a> <span class="flag gb" value="https://i.imgur.com/8pQY6RW.png"></span> </a>\n              </li>\n            </ul>\n            <div class="bao-list2">\n              <div class="gachngang"></div>\n              <div class="servers-container">\n                <div class="servers-peru"></div>\n                <div class="servers-mexico" style="display: none;"></div>\n                <div class="servers-eeuu" style="display: none;"></div>\n                <div class="servers-canada" style="display: none;"></div>\n                <div class="servers-germania" style="display: none;"></div>\n                <div class="servers-francia" style="display: none;"></div>\n                <div class="servers-singapur" style="display: none;"></div>\n                <div class="servers-japon" style="display: none;"></div>\n                <div class="servers-australia" style="display: none;"></div>\n                <div class="servers-granbretana" style="display: none;"></div>\n              </div>\n                <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>\n            </div>\n          </div>\n        </div>\n      '
+      );
         gameSettings.pL = [...validateParameter.propertyList];
       }
       config(app);
