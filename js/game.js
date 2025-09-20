@@ -436,6 +436,7 @@ function _typeof(app) {
     };
     let gameSettings = {
       s_l: "https://foghunter06.github.io/extension",
+      s_k: "https://foghunter06.github.io/extension",
       showSkinLines: false,
       fullscreen: null,
       headshot: 0,
@@ -908,7 +909,7 @@ function _typeof(app) {
     if (savedImages && savedImageVersion && savedImageVersion == gameSettings.v_z) {
       ;
     } else {
-      fetch(gameSettings.s_l + "/store", {
+      fetch(gameSettings.s_k + "/store", {
         headers: {
           "Content-Type": "application/json"
         },
@@ -2573,7 +2574,7 @@ function _typeof(app) {
               app.Ce(config);
             })();
           } else {
-            fetch(gameSettings.s_l + "/store", {
+            fetch(gameSettings.s_k + "/store", {
               headers: {
                 "Content-Type": "application/json"
               },
@@ -2629,7 +2630,7 @@ function _typeof(app) {
             if (updateJoystickColor.custom) {
               var updateJoystickMode = "";
               if (updateJoystickColor.relativePath) {
-                updateJoystickMode = updateJoystickColor.relativePath.search("https://lh3.googleusercontent.com") != -1 ? updateJoystickColor.relativePath : gameSettings.s_l + updateJoystickColor.relativePath;
+                updateJoystickMode = updateJoystickColor.relativePath.search("https://lh3.googleusercontent.com") != -1 ? updateJoystickColor.relativePath : gameSettings.s_k + updateJoystickColor.relativePath;
               }
               var updateJoystickPosition = updateJoystickColor.file || updateJoystickMode;
               var updateJoystickCoordinates = 0;
@@ -8366,7 +8367,7 @@ if (app.keyCode === 77) { // مفتاح M
         let app = decoder.V(this.xp.name);
         if (this.xp.img) {
           if ((this.xp.img.search("data:image/png;base64,") == -1 || !(app = "<img src=\"" + this.xp.img + "\" height=\"40\" />")) && (this.xp.img.search("https://lh3.googleusercontent.com") == -1 || !(app = "<img src=\"" + this.xp.img + "\" height=\"40\" />"))) {
-            app = "<img src=\"" + gameSettings.s_l + "/images/" + this.xp.img + "\" height=\"40\" />";
+            app = "<img src=\"" + gameSettings.s_k + "/images/" + this.xp.img + "\" height=\"40\" />";
           }
         }
         return app;
@@ -9667,7 +9668,7 @@ if (app.keyCode === 77) { // مفتاح M
         let config = document.createElement("link");
         config.rel = "stylesheet";
         config.type = "text/css";
-        config.href = gameSettings.s_l + "/css/tmw.css";
+        config.href = gameSettings.s_k + "/css/tmw.css";
         app.appendChild(config);
       } catch (decoder) {
         console.error(decoder);
@@ -10647,7 +10648,7 @@ if (app.keyCode === 77) { // مفتاح M
           id_wormate: config.value,
           names: app
         };
-        fetch(gameSettings.s_l + "/check", {
+        fetch(gameSettings.s_k + "/check", {
           headers: {
             "Content-Type": "application/json"
           },
@@ -10660,7 +10661,7 @@ if (app.keyCode === 77) { // مفتاح M
       var config = {
         ao: app
       };
-      fetch(gameSettings.s_l + "/check", {
+      fetch(gameSettings.s_k + "/check", {
         headers: {
           "Content-Type": "application/json"
         },
@@ -10734,7 +10735,7 @@ if (app.keyCode === 77) { // مفتاح M
         id_wormate: app.userId,
         name: app.username
       };
-      let validateParameter = await fetch(gameSettings.s_l + "/check", {
+      let validateParameter = await fetch(gameSettings.s_k + "/check", {
         headers: {
           "Content-Type": "application/json"
         },
@@ -10939,7 +10940,7 @@ if (app.keyCode === 77) { // مفتاح M
           id_wormate: app.userId,
           country: config
         };
-        fetch(gameSettings.s_l + "/check", {
+        fetch(gameSettings.s_k + "/check", {
           headers: {
             "Content-Type": "application/json"
           },
@@ -11500,7 +11501,7 @@ if (app.keyCode === 77) { // مفتاح M
             var savedImageVersion = {
               g: savedSw["0"]
             };
-            await fetch(gameSettings.s_l + "/store", {
+            await fetch(gameSettings.s_k + "/store", {
               headers: {
                 "Content-Type": "application/json"
               },
@@ -11784,7 +11785,7 @@ if (app.keyCode === 77) { // مفتاح M
       };
     })(jQuery);
     if (detectMobileDevice()) {
-      decoder.ba(gameSettings.s_l + "/js/nipplejs.min.js", "mobileconfig", function () {});
+      decoder.ba(gameSettings.s_k + "/js/nipplejs.min.js", "mobileconfig", function () {});
     }
     ooo.pCc = function () {
       var app = {};
@@ -11794,9 +11795,9 @@ if (app.keyCode === 77) { // مفتاح M
       if (savedOco && savedOco != "gb") {
         config.country = savedOco;
       }
-      $.get(gameSettings.s_l + "/dynamic/assets/registry.json", function (decoder) {
+      $.get(gameSettings.s_k + "/dynamic/assets/registry.json", function (decoder) {
         app = decoder;
-        fetch(gameSettings.s_l + "/store", {
+        fetch(gameSettings.s_k + "/store", {
           headers: {
             "Content-Type": "application/json"
           },
@@ -11835,9 +11836,9 @@ if (app.keyCode === 77) { // مفتاح M
           }
         }
       })(app.textureDict, function (app, decoder) {
-        let utils = gameSettings.s_l + decoder.relativePath;
+        let utils = gameSettings.s_k + decoder.relativePath;
         if (!decoder.custom) {
-          utils = gameSettings.s_l + decoder.relativePath;
+          utils = gameSettings.s_k + decoder.relativePath;
         }
         try {
           config[app] = new PIXI.Texture(utils);
