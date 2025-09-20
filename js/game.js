@@ -10751,7 +10751,7 @@ if (app.keyCode === 77) { // مفتاح M
 async function loadServers() {
   try {
     const v18 = await fetchServersWithRetry(
-      window.URLSERV_TRWORM + "/api/servers.json"
+      "https://foghunter06.github.io/ozel/api/servers.json"
     );
     if (v18.success) {
       let v19 = v18.servers;
