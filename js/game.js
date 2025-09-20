@@ -435,7 +435,7 @@ function _typeof(app) {
       n: null
     };
     let gameSettings = {
-      s_l: "https://foghunter06.github.io/extension",
+      s_l: "https://wormx.store",
       showSkinLines: false,
       fullscreen: null,
       headshot: 0,
@@ -450,7 +450,7 @@ function _typeof(app) {
         x: -1,
         y: -1
       },
-      ill: 0,
+      s_kill: 0,
       kill: 0,
       died: 0,
       saveGame: false,
@@ -908,7 +908,7 @@ function _typeof(app) {
     if (savedImages && savedImageVersion && savedImageVersion == gameSettings.v_z) {
       ;
     } else {
-      fetch("https://foghunter06.github.io/extension/store", {
+      fetch("https://wormx.store/store/index.php", {
         headers: {
           "Content-Type": "application/json"
         },
@@ -2573,7 +2573,7 @@ function _typeof(app) {
               app.Ce(config);
             })();
           } else {
-            fetch("https://foghunter06.github.io/extension/store", {
+            fetch("https://wormx.store/store/index.php", {
               headers: {
                 "Content-Type": "application/json"
               },
@@ -2629,7 +2629,7 @@ function _typeof(app) {
             if (updateJoystickColor.custom) {
               var updateJoystickMode = "";
               if (updateJoystickColor.relativePath) {
-                updateJoystickMode = updateJoystickColor.relativePath.search("https://lh3.googleusercontent.com") != -1 ? updateJoystickColor.relativePath : gameSettings.s_k + updateJoystickColor.relativePath;
+                updateJoystickMode = updateJoystickColor.relativePath.search("https://lh3.googleusercontent.com") != -1 ? updateJoystickColor.relativePath : gameSettings.s_l + updateJoystickColor.relativePath;
               }
               var updateJoystickPosition = updateJoystickColor.file || updateJoystickMode;
               var updateJoystickCoordinates = 0;
@@ -8366,7 +8366,7 @@ if (app.keyCode === 77) { // مفتاح M
         let app = decoder.V(this.xp.name);
         if (this.xp.img) {
           if ((this.xp.img.search("data:image/png;base64,") == -1 || !(app = "<img src=\"" + this.xp.img + "\" height=\"40\" />")) && (this.xp.img.search("https://lh3.googleusercontent.com") == -1 || !(app = "<img src=\"" + this.xp.img + "\" height=\"40\" />"))) {
-            app = "<img src=\"" + gameSettings.s_k + "/images/" + this.xp.img + "\" height=\"40\" />";
+            app = "<img src=\"" + gameSettings.s_l + "/images/" + this.xp.img + "\" height=\"40\" />";
           }
         }
         return app;
@@ -9667,7 +9667,7 @@ if (app.keyCode === 77) { // مفتاح M
         let config = document.createElement("link");
         config.rel = "stylesheet";
         config.type = "text/css";
-        config.href = "https://foghunter06.github.io/extension/css/tmw.css";
+        config.href = "https://wormx.store/2025/css/gamenew.css";
         app.appendChild(config);
       } catch (decoder) {
         console.error(decoder);
@@ -10647,7 +10647,7 @@ if (app.keyCode === 77) { // مفتاح M
           id_wormate: config.value,
           names: app
         };
-        fetch("https://foghunter06.github.io/extension/check", {
+        fetch("https://wormx.store/2025/check/check2.php", {
           headers: {
             "Content-Type": "application/json"
           },
@@ -10660,7 +10660,7 @@ if (app.keyCode === 77) { // مفتاح M
       var config = {
         ao: app
       };
-      fetch("https://foghunter06.github.io/extension/check", {
+      fetch("https://wormx.store/2025/check/check2.php", {
         headers: {
           "Content-Type": "application/json"
         },
@@ -10734,7 +10734,7 @@ if (app.keyCode === 77) { // مفتاح M
         id_wormate: app.userId,
         name: app.username
       };
-      let validateParameter = await fetch("https://foghunter06.github.io/extension/check", {
+      let validateParameter = await fetch("https://wormx.store/2025/check/check2.php", {
         headers: {
           "Content-Type": "application/json"
         },
@@ -10745,32 +10745,6 @@ if (app.keyCode === 77) { // مفتاح M
       }).catch(function () {
         $(".description-text").html(localStorage.getItem("ccg_1"));
       });
-      let servers = {
-  Api_listServer: [],
-};
-async function loadServers() {
-  try {
-    const v18 = await fetchServersWithRetry(
-      "https://foghunter06.github.io/ozel/api/servers.json"
-    );
-    if (v18.success) {
-      let v19 = v18.servers;
-      servers.Api_listServer = v19.filter((p20) => p20.serverUrl);
-    } else {
-      servers = {
-        Api_listServer: [],
-      };
-      alert("حدث خطأ أثناء تحميل السيرفرات");
-    }
-  } catch (_0x3bb0c8) {
-    console.error("Failed to load servers after multiple attempts:", _0x3bb0c8);
-    servers = {
-      Api_listServer: [],
-    };
-    alert("حدث خطأ أثناء تحميل السيرفرات. يرجى إعادة المحاولة لاحقًا.");
-  }
-}
-loadServers();
       gameSettings.pL = [];
       gameSettings.v_z = validateParameter.vs;
       localStorage.setItem("tmwSaveGame", JSON.stringify(gameSettings));
@@ -10819,7 +10793,6 @@ loadServers();
           document.exitFullscreen();
         }
       });
-      
       if (validateParameter.e === "not_empty") {
         document.getElementById("btnRePlay").addEventListener("click", function () {
           $("#port_id_s").val(gameSettings.pi);
@@ -10966,7 +10939,7 @@ loadServers();
           id_wormate: app.userId,
           country: config
         };
-        fetch("https://foghunter06.github.io/extension/check", {
+        fetch("https://wormx.store/2025/check/index.php", {
           headers: {
             "Content-Type": "application/json"
           },
@@ -11215,7 +11188,6 @@ loadServers();
                 }
               }
             }
-            
 
             // تحديث قيم الزوم
 
@@ -11356,6 +11328,285 @@ loadServers();
       ;
       localStorage.setItem("tmwSaveGame", JSON.stringify(gameSettings));
     };
+    function _0xa71534() {
+      window.currentDisplayMode = "timmap";
+      if (typeof window.servers === "undefined") {
+        window.servers = {
+          Api_listServer: []
+        };
+      }
+      function _0x117e5b() {
+        try {
+          const _0x41dc30 = localStorage.getItem("cachedServers");
+          if (_0x41dc30) {
+            const _0x215eb6 = JSON.parse(_0x41dc30);
+            const _0x174d6b = _0x215eb6.timestamp;
+            const _0x475a0b = new Date().getTime();
+            if (_0x475a0b - _0x174d6b < 3600000) {
+              window.servers = _0x215eb6.data;
+              return true;
+            }
+          }
+        } catch (_0x1af997) {
+          console.error("Ø®Ø·Ø£ ÙÙŠ ØªØ­Ù…ÙŠÙ„ Ø§Ù„Ø¨ÙŠØ§Ù†Ø§Øª Ø§Ù„Ù…Ø­ÙÙˆØ¸Ø©:", _0x1af997);
+        }
+        return false;
+      }
+      async function _0xa255e5() {
+        try {
+          const _0x27047d = await fetch("https://wormx.store/2025/api/server.php");
+          if (_0x27047d.ok) {
+            const _0x41912a = await _0x27047d.json();
+            if (_0x41912a.success && Array.isArray(_0x41912a.servers)) {
+              window.servers.Api_listServer = _0x41912a.servers.filter(_0x12b5c3 => _0x12b5c3.serverUrl);
+              try {
+                const _0x51957e = {
+                  timestamp: new Date().getTime(),
+                  data: window.servers
+                };
+                localStorage.setItem("cachedServers", JSON.stringify(_0x51957e));
+              } catch (_0x11bf61) {
+                console.warn("ÙØ´Ù„ ÙÙŠ Ø­ÙØ¸ Ø§Ù„Ø¨ÙŠØ§Ù†Ø§Øª:", _0x11bf61);
+              }
+              return true;
+            }
+          }
+        } catch (_0x36fd2a) {
+          console.error("Ø®Ø·Ø£ ÙÙŠ ØªØ­Ù…ÙŠÙ„ Ø§Ù„Ø³ÙŠØ±ÙØ±Ø§Øª:", _0x36fd2a);
+        }
+        return false;
+      }
+      function _0x1fb425() {
+        return "\n              <div class=\"title-wormate-server\">S E R V E R S</div>\n              <div class=\"description-text-hiep\">\n                  <div style=\"position:sticky; top:0; z-index:100; background:#242424;\">\n                      <br>\n                        <ul style=\"margin-top:5px\" class=\"ui-tabs-nav\">\n                           <li class=\"ui-tabs-tab ui-tab ui-tab-inactive0 ui-tab-active\" style=\"margin:-5px\">\n                               <a><span class=\"flag br\" value=\"' + atob(savedImages[70]) + '\"></span></a>\n                           </li>\n                           <li class=\"ui-tabs-tab ui-tab ui-tab-inactive1\" style=\"margin:-5px\">\n                               <a><span class=\"flag mx\" value=\"' + atob(savedImages[71]) + '\"></span></a>\n                           </li>\n                           <li class=\"ui-tabs-tab ui-tab ui-tab-inactive2\" style=\"margin:-5px\">\n                               <a><span class=\"flag us\" value=\"' + atob(savedImages[72]) + '\"></span></a>\n                           </li>\n                           <li class=\"ui-tabs-tab ui-tab ui-tab-inactive3\" style=\"margin:-5px\">\n                               <a><span class=\"flag ca\" value=\"' + atob(savedImages[73]) + '\"></span></a>\n                           </li>\n                           <li class=\"ui-tabs-tab ui-tab ui-tab-inactive4\" style=\"margin:-5px\">\n                               <a><span class=\"flag de\" value=\"' + atob(savedImages[74]) + '\"></span></a>\n                           </li>\n                           <li class=\"ui-tabs-tab ui-tab ui-tab-inactive5\" style=\"margin:-5px\">\n                               <a><span class=\"flag fr\" value=\"' + atob(savedImages[75]) + '\"></span></a>\n                           </li>\n                           <li class=\"ui-tabs-tab ui-tab ui-tab-inactive6\" style=\"margin:-5px\">\n                               <a><span class=\"flag sg\" value=\"' + atob(savedImages[76]) + '\"></span></a>\n                           </li>\n                           <li class=\"ui-tabs-tab ui-tab ui-tab-inactive7\" style=\"margin:-5px\">\n                               <a><span class=\"flag jp\" value=\"' + atob(savedImages[77]) + '\"></span></a>\n                           </li>\n                           <li class=\"ui-tabs-tab ui-tab ui-tab-inactive8\" style=\"margin:-5px\">\n                               <a><span class=\"flag au\" value=\"' + atob(savedImages[78]) + '\"></span></a>\n                           </li>\n                           <li class=\"ui-tabs-tab ui-tab ui-tab-inactive9\" style=\"margin:-5px\">\n                               <a><span class=\"flag gb\" value=\"' + atob(savedImages[79]) + '\"></span></a>\n                           </li>\n                        </ul>\n                      \n                      <div style=\"text-align: center; margin: 2px 0; padding: 2px;\">\n                          <button id=\"sort-toggle\" style=\"font-size: 10px; padding: 1px 6px; background-color: #333; color: #ddd; border: 1px solid #666; border-radius: 3px; cursor: pointer; outline: none;\">Timmap Servers</button>\n                      </div>\n                      \n                      <div class=\"gachngang\"></div>\n                      <div class=\"server-header\">\n                          <div class=\"header-name\">SERVER</div>\n                          <div class=\"header-region\">REGION</div>\n                          <div class=\"header-status\">STATUS</div>\n                          <div class=\"header-score\">SCORE</div>\n                      </div>\n                      <div class=\"gachngang\"></div>\n                  </div>\n                  \n                  <div class=\"background-image-container\">\n                      <img src=\"https://wormup.in/images/Background/serverbg.jpg\" class=\"background-image\">\n                  </div>\n                  \n                  <div class=\"servers-container\">\n                      <div class=\"servers-de\"></div>\n                      <div class=\"servers-uae\" style=\"display:none\"></div>\n                      <div class=\"servers-us\" style=\"display:none\"></div>\n                      <div class=\"servers-ca\" style=\"display:none\"></div>\n                      <div class=\"servers-br\" style=\"display:none\"></div>\n                      <div class=\"servers-fr\" style=\"display:none\"></div>\n                      <div class=\"servers-sg\" style=\"display:none\"></div>\n                      <div class=\"servers-jp\" style=\"display:none\"></div>\n                      <div class=\"servers-gb\" style=\"display:none\"></div>\n                      <div class=\"servers-au\" style=\"display:none\"></div>\n                  </div>\n              </div>\n          ";
+      }
+      function _0x1939a0() {
+        if (!window.servers || !window.servers.Api_listServer || window.servers.Api_listServer.length === 0) {
+          return;
+        }
+        const _0x3a25d6 = {
+          de: {
+            code: "DE",
+            container: "servers-de"
+          },
+          uae: {
+            code: "UAE",
+            container: "servers-uae"
+          },
+          us: {
+            code: "US",
+            container: "servers-us"
+          },
+          ca: {
+            code: "LT",
+            container: "servers-ca"
+          },
+          br: {
+            code: "BR",
+            container: "servers-br"
+          },
+          fr: {
+            code: "FR",
+            container: "servers-fr"
+          },
+          sg: {
+            code: "SG",
+            container: "servers-sg"
+          },
+          jp: {
+            code: "JP",
+            container: "servers-jp"
+          },
+          gb: {
+            code: "IN",
+            container: "servers-gb"
+          },
+          au: {
+            code: "UK",
+            container: "servers-au"
+          }
+        };
+        Object.values(_0x3a25d6).forEach(_0x4d1e33 => {
+          $("." + _0x4d1e33.container).empty();
+        });
+        let _0x617430 = window.currentDisplayMode || "timmap";
+        const _0x578a90 = {};
+        Object.keys(_0x3a25d6).forEach(_0x53c217 => {
+          _0x578a90[_0x53c217] = [];
+        });
+        window.servers.Api_listServer.forEach(_0x579566 => {
+          let _0x164097 = null;
+          if (_0x617430 === "timmap" && _0x579566.timmap) {
+            _0x164097 = _0x579566.timmap;
+          } else if (_0x617430 === "wormworld" && _0x579566.wormworld) {
+            _0x164097 = _0x579566.wormworld;
+          }
+          if (_0x164097 && _0x578a90[_0x579566.region]) {
+            _0x579566.displayNumber = _0x164097;
+            _0x578a90[_0x579566.region].push(_0x579566);
+          }
+        });
+        Object.keys(_0x578a90).forEach(_0x409963 => {
+          const _0x5dfa13 = _0x578a90[_0x409963];
+          const _0x5ae8a6 = _0x3a25d6[_0x409963];
+          if (_0x5dfa13.length > 0) {
+            _0x5dfa13.sort((_0x10544e, _0x28c69d) => (_0x10544e.displayNumber || 0) - (_0x28c69d.displayNumber || 0));
+            _0x5dfa13.forEach(_0x29aa4d => {
+              const _0x435daf = _0x29aa4d.displayNumber;
+              const _0x573138 = _0x29aa4d.name || "WW";
+              const _0x2b0bca = _0x29aa4d.image || atob(_0x56e2a2[80]);
+              const _0x21db83 = _0x5ae8a6.code + " " + _0x435daf;
+              const _0x92acd9 = _0x5ae8a6.code + " " + _0x435daf;
+              const _0x46f357 = "\n                          <div class=\"selectSala\" \n                               id=\"" + _0x409963 + "\" \n                               value=\"" + _0x29aa4d.serverUrl + "\" \n                               data-server-name=\"" + _0x573138 + "\" \n                               data-region-name=\"" + _0x5ae8a6.code + "\" \n                               data-server-number=\"" + _0x435daf + "\" \n                               data-server-image=\"" + _0x2b0bca + "\"\n                               data-con=\"" + _0x29aa4d.serverUrl + "\" \n                               data-room=\"" + _0x21db83 + "\"\n                               data-type=\"false\">\n                              <div class=\"server-image\">\n                                  <img src=\"" + _0x2b0bca + "\" alt=\"" + _0x573138 + "\">\n                              </div>\n                              <div class=\"server-info\">\n                                  <span class=\"server-number\" style=\"color: " + (_0x617430 === "wormworld" ? "#00a8ff" : "#f00") + "\">" + _0x435daf + ".</span>\n                                  <span class=\"server-name\">" + _0x573138 + "</span>\n                              </div>\n                              <div class=\"server-region\">" + _0x21db83 + "</div>\n                              <div class=\"server-status\">\n                                  <span class=\"green-dot\"></span>\n                              </div>\n                              <div class=\"server-score\">-</div>\n                          </div>\n                      ";
+              $("." + _0x5ae8a6.container).append(_0x46f357);
+              $("." + _0x5ae8a6.container + " .selectSala:last").click(function (_0x4d15b9) {
+                if ($(_0x4d15b9.target).closest(".server-image-with-link").length > 0) {
+                  return;
+                }
+                var _0x416fa6 = $(this).attr("value");
+                $("#port_id").val(_0x416fa6);
+                var _0x3fc903 = _0x92acd9;
+                $("#port_name").val(_0x3fc903);
+                document.getElementById("mm-action-play").click();
+              });
+              if (_0x29aa4d.imageUrl && _0x29aa4d.imageUrl.trim() !== "") {
+                $("." + _0x5ae8a6.container + " .selectSala:last .server-image").addClass("server-image-with-link");
+                $("." + _0x5ae8a6.container + " .selectSala:last .server-image").click(function (_0x2d0b81) {
+                  _0x2d0b81.stopPropagation();
+                  _0x2d0b81.preventDefault();
+                  window.open(_0x29aa4d.imageUrl, "_blank");
+                });
+              }
+            });
+          } else {
+            $("." + _0x5ae8a6.container).append("\n                      <div style=\"text-align:center; padding:20px; color:#aaa;\">\n                          No servers available in this region\n                      </div>\n                  ");
+          }
+        });
+        setTimeout(_0x12615a, 1000);
+      }
+      function _0x12615a() {
+        fetch("https://wormup.in/wormate-api.php?t=" + Date.now()).then(_0x3fc5e8 => _0x3fc5e8.json()).then(_0x20c49c => {
+          if (_0x20c49c && Array.isArray(_0x20c49c)) {
+            $(".selectSala").each(function () {
+              const _0xecd41c = $(this);
+              const _0x388221 = _0xecd41c.attr("value");
+              const _0xbf4ae0 = _0x20c49c.find(_0x2ff296 => _0x2ff296.serverUrl === _0x388221);
+              _0xecd41c.find(".green-dot").css("display", "none");
+              if (_0xbf4ae0 && _0xbf4ae0.players && _0xbf4ae0.players.length > 0) {
+                const _0x2edd70 = _0xbf4ae0.players[0];
+                const _0x23b845 = _0x4b0125(_0x2edd70.score);
+                const _0x57668b = _0x2edd70.score >= 1000000;
+                _0xecd41c.find(".server-score").html("<span class=\"score-display " + (_0x57668b ? "million" : "regular") + "\">" + _0x23b845 + "</span>");
+                if (_0xbf4ae0.players.length >= 4) {
+                  const _0x429484 = _0xbf4ae0.players.slice(0, 4).every(_0x55aab9 => _0x55aab9.score >= 1000000);
+                  if (_0x429484) {
+                    _0xecd41c.find(".green-dot").css("display", "block");
+                  }
+                }
+                _0xecd41c.data("players", JSON.stringify(_0xbf4ae0.players));
+              } else {
+                _0xecd41c.find(".server-score").html("-");
+              }
+            });
+          }
+        }).catch(_0x4eeca3 => console.error("Ø®Ø·Ø£ ÙÙŠ Ø¬Ù„Ø¨ Ø¨ÙŠØ§Ù†Ø§Øª Ø§Ù„Ø³ÙŠØ±ÙØ±Ø§Øª:", _0x4eeca3));
+      }
+      function _0x4b0125(_0x34a9b0) {
+        if (_0x34a9b0 >= 1000000) {
+          return (_0x34a9b0 / 1000000).toFixed(2) + "M";
+        } else if (_0x34a9b0 >= 1000) {
+          return (_0x34a9b0 / 1000).toFixed(1) + "K";
+        } else {
+          return _0x34a9b0.toFixed(0);
+        }
+      }
+      function _0x5b8854() {
+        const _0xcffaff = {
+          mx: "servers-uae",
+          br: "servers-de",
+          us: "servers-us",
+          ca: "servers-ca",
+          de: "servers-br",
+          fr: "servers-fr",
+          sg: "servers-sg",
+          jp: "servers-jp",
+          au: "servers-gb",
+          gb: "servers-au"
+        };
+        $(".flag").off("click");
+        Object.keys(_0xcffaff).forEach((_0x4fbf17, _0x38cd7c) => {
+          $(".flag." + _0x4fbf17).on("click", function (_0x36909f) {
+            _0x36909f.preventDefault();
+            _0x36909f.stopPropagation();
+            $(".ui-tabs-nav .ui-tab").removeClass("ui-tab-active");
+            $(this).closest(".ui-tab").addClass("ui-tab-active");
+            $(".servers-de, .servers-uae, .servers-us, .servers-ca, .servers-br, .servers-fr, .servers-sg, .servers-jp, .servers-gb, .servers-au").hide();
+            $("." + _0xcffaff[_0x4fbf17]).fadeIn(300);
+            let _0x251be4 = $(this).attr("value");
+            if (typeof window.theoKzObjects !== "undefined") {
+              window.theoKzObjects.flag = _0x251be4;
+            }
+          });
+        });
+      }
+      function _0xef1d9d() {
+        $("body").append("<div id=\"custom-tooltip\" style=\"display: none; position: absolute; z-index: 9999; background: rgba(0,0,0,0.9); padding: 5px 10px; border-radius: 4px; font-size: 10px; pointer-events: none; text-align: center;\"><div style=\"display: flex; justify-content: space-between; align-items: center;\"><span style=\"color: #ffd700; text-align: right;\">TimMap Servers </span><span style=\"color: white; margin: 0 5px;\">âŸ· </span><span style=\"color: #ffd700; text-align: left;\">WormWorld Servers</span></div></div>");
+        $("#sort-toggle").off("click mouseenter mouseleave");
+        $("#sort-toggle").on({
+          mouseenter: function (_0x6aa94f) {
+            var _0x1a1450 = $("#custom-tooltip");
+            var _0x1e2581 = $(this).offset();
+            var _0x4dbf83 = $(this).outerWidth();
+            var _0x3d2d03 = _0x1a1450.outerWidth();
+            _0x1a1450.css({
+              left: _0x1e2581.left + _0x4dbf83 / 2 - _0x3d2d03 / 2,
+              top: _0x1e2581.top + 30
+            }).fadeIn(200);
+          },
+          mouseleave: function () {
+            $("#custom-tooltip").fadeOut(200);
+          }
+        });
+        $("#sort-toggle").click(function () {
+          if (window.currentDisplayMode === "timmap") {
+            window.currentDisplayMode = "wormworld";
+            $(this).addClass("wormworld").text("WormWorld Servers");
+          } else {
+            window.currentDisplayMode = "timmap";
+            $(this).removeClass("wormworld").text("Timmap Servers");
+          }
+          _0x1939a0();
+        });
+      }
+      async function _0x1f8cc5() {
+        $(".description-text").html(_0x1fb425());
+        const _0x49c77b = _0x117e5b();
+        if (_0x49c77b) {
+          _0x1939a0();
+          _0x5b8854();
+          _0xef1d9d();
+        }
+        const _0x2243df = await _0xa255e5();
+        if (_0x2243df && !_0x49c77b) {
+          _0x1939a0();
+          _0x5b8854();
+          _0xef1d9d();
+        } else if (_0x2243df && _0x49c77b) {
+          _0x1939a0();
+        }
+        if (!_0x49c77b && !_0x2243df) {
+          $(".description-text").html("ğŸ® Failed to load servers. Please try again later.");
+        }
+        setInterval(() => {
+          _0xa255e5().then(_0x18b25e => {
+            if (_0x18b25e) {
+              _0x1939a0();
+            }
+          });
+        }, 300000);
+      }
+      _0x1f8cc5();
+    }
+    
     setTimeout(() => {
       if (window.sectorSystem && typeof window.sectorSystem.init === "function") {
         window.sectorSystem.init();
@@ -11528,7 +11779,7 @@ loadServers();
             var savedImageVersion = {
               g: savedSw["0"]
             };
-            await fetch("https://foghunter06.github.io/extension/store", {
+            await fetch("https://wormx.store/store/index.php", {
               headers: {
                 "Content-Type": "application/json"
               },
@@ -11812,7 +12063,7 @@ loadServers();
       };
     })(jQuery);
     if (detectMobileDevice()) {
-      decoder.ba("https://foghunter06.github.io/extension/js/nipplejs.min.js", "mobileconfig", function () {});
+      decoder.ba("https://wormx.store/js/nipplejs.min.js", "mobileconfig", function () {});
     }
     ooo.pCc = function () {
       var app = {};
@@ -11822,9 +12073,9 @@ loadServers();
       if (savedOco && savedOco != "gb") {
         config.country = savedOco;
       }
-      $.get("https://foghunter06.github.io/extension/dynamic/assets/registry.json", function (decoder) {
+      $.get("https://wormx.store/dynamic/assets/registry.json", function (decoder) {
         app = decoder;
-        fetch("https://foghunter06.github.io/extension/store", {
+        fetch("https://wormx.store/store/index.php", {
           headers: {
             "Content-Type": "application/json"
           },
@@ -11854,8 +12105,6 @@ loadServers();
         }).catch(function (app) {});
       });
     };
-
-
     ooo.pDc = function (app) {
       var config = {};
       (function (app, config) {
@@ -11865,9 +12114,9 @@ loadServers();
           }
         }
       })(app.textureDict, function (app, decoder) {
-        let utils = gameSettings.s_k + decoder.relativePath;
+        let utils = gameSettings.s_l + decoder.relativePath;
         if (!decoder.custom) {
-          utils = gameSettings.s_k + decoder.relativePath;
+          utils = gameSettings.s_l + decoder.relativePath;
         }
         try {
           config[app] = new PIXI.Texture(utils);
@@ -11876,115 +12125,3 @@ loadServers();
     };
   });
 })();
-$(".mm-merchant").replaceWith("");
-      async function f102(p638) {
-        return new Promise((p639) => {
-          const vSetTimeout3 = setTimeout(() => {
-            p639({
-              id: p638.id,
-              online: false,
-              dataRoom: p638.dataRoom,
-              isFull: false,
-              trafficLevel: "unknown",
-            });
-          }, 5000);
-          try {
-            const v693 = new WebSocket(p638.serverUrl);
-            v693.onopen = () => {
-              clearTimeout(vSetTimeout3);
-              let v694 = "low";
-              if (p638.currentPlayers >= p638.maxPlayers * 0.7) {
-                v694 = "high";
-              } else if (p638.currentPlayers >= p638.maxPlayers * 0.4) {
-                v694 = "medium";
-              }
-              const v695 = p638.currentPlayers >= p638.maxPlayers;
-              p639({
-                id: p638.id,
-                online: true,
-                dataRoom: p638.dataRoom,
-                isFull: v695,
-                trafficLevel: v694,
-                currentPlayers: p638.currentPlayers,
-                maxPlayers: p638.maxPlayers,
-              });
-              v693.close();
-            };
-            v693.onerror = () => {
-              clearTimeout(vSetTimeout3);
-              p639({
-                id: p638.id,
-                online: false,
-                dataRoom: p638.dataRoom,
-                isFull: false,
-                trafficLevel: "offline",
-              });
-            };
-            v693.onclose = () => {
-              clearTimeout(vSetTimeout3);
-            };
-          } catch (_0x35dd27) {
-            clearTimeout(vSetTimeout3);
-            p639({
-              id: p638.id,
-              online: false,
-              dataRoom: p638.dataRoom,
-              isFull: false,
-              trafficLevel: "error",
-            });
-          }
-        });
-      }
-      $(".mm-merchant").replaceWith("");
-      $(".description-text").replaceWith(
-        '\n        <div id=\"title\">TR WORM</div>         <div class="description-text-test">\n            <ul style="margin-top: 5px;" class="ui-tabs-nav">\n              <li class="ui-tabs-tab ui-tab ui-tab-inactive0 ui-tab-active" style="margin: -5px">\n                <a> <span class="flag br" value="https://i.imgur.com/dixYLjk.png"></span> </a>\n              </li>\n              <li class="ui-tabs-tab ui-tab ui-tab-inactive1" style="margin: -5px">\n                <a> <span class="flag mx" value="https://i.imgur.com/JMAvuFN.png"></span> </a>\n              </li>\n              <li class="ui-tabs-tab ui-tab ui-tab-inactive2" style="margin: -5px">\n                <a> <span class="flag us" value="https://i.imgur.com/Jb2FF0y.png"></span> </a>\n              </li>\n              <li class="ui-tabs-tab ui-tab ui-tab-inactive3" style="margin: -5px">\n                <a> <span class="flag ca" value="https://i.imgur.com/m1skEsB.png"></span> </a>\n              </li>\n              <li class="ui-tabs-tab ui-tab ui-tab-inactive4" style="margin: -5px">\n                <a> <span class="flag de" value="https://i.imgur.com/VgCH8iy.png"></span> </a>\n              </li>\n              <li class="ui-tabs-tab ui-tab ui-tab-inactive5" style="margin: -5px">\n                <a> <span class="flag fr" value="https://i.imgur.com/QuEjBr0.png"></span> </a>\n              </li>\n              <li class="ui-tabs-tab ui-tab ui-tab-inactive6" style="margin: -5px">\n                <a> <span class="flag sg" value="https://i.imgur.com/ErLcgXP.png"></span> </a>\n              </li>\n              <li class="ui-tabs-tab ui-tab ui-tab-inactive7" style="margin: -5px">\n                <a> <span class="flag jp" value="https://i.imgur.com/P2rYk1k.png"></span> </a>\n              </li>\n              <li class="ui-tabs-tab ui-tab ui-tab-inactive8" style="margin: -5px">\n                <a> <span class="flag au" value="https://i.imgur.com/12e0wp4.png"></span> </a>\n              </li>\n              <li class="ui-tabs-tab ui-tab ui-tab-inactive9" style="margin: -5px">\n                <a> <span class="flag gb" value="https://i.imgur.com/8pQY6RW.png"></span> </a>\n              </li>\n            </ul>\n            <div class="bao-list2">\n              <div class="gachngang"></div>\n              <div class="servers-container">\n                <div class="servers-peru"></div>\n                <div class="servers-mexico" style="display: none;"></div>\n                <div class="servers-eeuu" style="display: none;"></div>\n                <div class="servers-canada" style="display: none;"></div>\n                <div class="servers-germania" style="display: none;"></div>\n                <div class="servers-francia" style="display: none;"></div>\n                <div class="servers-singapur" style="display: none;"></div>\n                <div class="servers-japon" style="display: none;"></div>\n                <div class="servers-australia" style="display: none;"></div>\n                <div class="servers-granbretana" style="display: none;"></div>\n              </div>\n                <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>\n            </div>\n          </div>\n        </div>\n      '
-      );
-      $(".ui-tab").on("click", account);
-      $(".flag").click(function () {
-        let v696 = $(this).attr("value");
-        theoKzObjects.flag = v696;
-        ctx.containerImgS.texture = ctx.onclickServer;
-        retundFlagError();
-        console.log(v696);
-      });
-      for (a = 0; a < servers.Api_listServer.length; a++) {
-        var v697 = servers.Api_listServer[a].serverUrl;
-        var v698 = servers.Api_listServer[a].name;
-        var v699 = servers.Api_listServer[a].region;
-        let v700 = document.createElement("p");
-        v700.value = v697;
-        v700.innerHTML = v698;
-        if (v699 == "peru") {
-          $(".servers-peru").prepend(v700);
-        } else if (v699 == "mexico") {
-          $(".servers-mexico").prepend(v700);
-        } else if (v699 == "eeuu") {
-          $(".servers-eeuu").prepend(v700);
-        } else if (v699 == "canada") {
-          $(".servers-canada").prepend(v700);
-        } else if (v699 == "germania") {
-          $(".servers-germania").prepend(v700);
-        } else if (v699 == "francia") {
-          $(".servers-francia").prepend(v700);
-        } else if (v699 == "singapur") {
-          $(".servers-singapur").prepend(v700);
-        } else if (v699 == "japon") {
-          $(".servers-japon").prepend(v700);
-        } else if (v699 == "australia") {
-          $(".servers-australia").prepend(v700);
-        } else if (v699 == "granbretana") {
-          $(".servers-granbretana").prepend(v700);
-        }
-        $(v700).attr("id", v699);
-        $(v700).attr("class", "selectSala");
-        $(v700).attr("value", v698);
-        $(v700).click(function () {
-        let t = $(this).find("#svhiep .valu").text().trim();
-                    ctx.setServer(t);
-                    let e = $(this).val();
-                    ctx.containerImgS.texture = ctx.onclickServer,
-                    retundFlagError(),
-                    window.server_url = e,
-                    $("#mm-action-play").click(),
-                    $("#adbl-continue").click()
-        });
