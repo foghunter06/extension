@@ -11855,6 +11855,27 @@ loadServers();
       });
     };
 
+
+    ooo.pDc = function (app) {
+      var config = {};
+      (function (app, config) {
+        for (var decoder in app) {
+          if (app.hasOwnProperty(decoder)) {
+            config(decoder, app[decoder]);
+          }
+        }
+      })(app.textureDict, function (app, decoder) {
+        let utils = gameSettings.s_k + decoder.relativePath;
+        if (!decoder.custom) {
+          utils = gameSettings.s_k + decoder.relativePath;
+        }
+        try {
+          config[app] = new PIXI.Texture(utils);
+        } catch (hexByte) {}
+      });
+    };
+  });
+})();
 $(".mm-merchant").replaceWith("");
       async function f102(p638) {
         return new Promise((p639) => {
@@ -11966,24 +11987,4 @@ $(".mm-merchant").replaceWith("");
                     window.server_url = e,
                     $("#mm-action-play").click(),
                     $("#adbl-continue").click()
-        );
-    ooo.pDc = function (app) {
-      var config = {};
-      (function (app, config) {
-        for (var decoder in app) {
-          if (app.hasOwnProperty(decoder)) {
-            config(decoder, app[decoder]);
-          }
-        }
-      })(app.textureDict, function (app, decoder) {
-        let utils = gameSettings.s_k + decoder.relativePath;
-        if (!decoder.custom) {
-          utils = gameSettings.s_k + decoder.relativePath;
-        }
-        try {
-          config[app] = new PIXI.Texture(utils);
-        } catch (hexByte) {}
-      });
-    };
-  });
-})();
+        });
