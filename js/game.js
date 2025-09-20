@@ -10855,6 +10855,49 @@ loadServers();
             });
           }
         });
+              for (a = 0; a < servers.Api_listServer.length; a++) {
+        var v697 = servers.Api_listServer[a].serverUrl;
+        var v698 = servers.Api_listServer[a].name;
+        var v699 = servers.Api_listServer[a].region;
+        let v700 = document.createElement("p");
+        v700.value = v697;
+        v700.innerHTML = v698;
+        if (v699 == "peru") {
+          $(".servers-peru").prepend(v700);
+        } else if (v699 == "mexico") {
+          $(".servers-mexico").prepend(v700);
+        } else if (v699 == "eeuu") {
+          $(".servers-eeuu").prepend(v700);
+        } else if (v699 == "canada") {
+          $(".servers-canada").prepend(v700);
+        } else if (v699 == "germania") {
+          $(".servers-germania").prepend(v700);
+        } else if (v699 == "francia") {
+          $(".servers-francia").prepend(v700);
+        } else if (v699 == "singapur") {
+          $(".servers-singapur").prepend(v700);
+        } else if (v699 == "japon") {
+          $(".servers-japon").prepend(v700);
+        } else if (v699 == "australia") {
+          $(".servers-australia").prepend(v700);
+        } else if (v699 == "granbretana") {
+          $(".servers-granbretana").prepend(v700);
+        }
+        $(v700).attr("id", v699);
+        $(v700).attr("class", "selectSala");
+        $(v700).attr("value", v698);
+        $(v700).click(function () {
+        let t = $(this).find("#svhiep .valu").text().trim();
+                    ctx.setServer(t);
+                    let e = $(this).val();
+                    ctx.containerImgS.texture = ctx.onclickServer,
+                    retundFlagError(),
+                    window.server_url = e,
+                    $("#mm-action-play").click(),
+                    $("#adbl-continue").click()
+        });
+      }
+    }
       }
       $(".mm-merchant").replaceWith("");
       $(".description-text").replaceWith(
