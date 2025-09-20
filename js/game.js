@@ -4891,7 +4891,7 @@ function _typeof(app) {
         var gameSettings;
         var savedData;
         var key;
-        var detectMobileDevice = utils.k.m.from(atob(savedImages[23]) || config.H.N);
+        var detectMobileDevice = utils.k.m.from("https://wormate.io/images/confetti-valday2025.png") || config.H.N);
         var updateJoystickEnabled = new utils.k.n(detectMobileDevice, new utils.k.r(0, 0, 256, 256));
         var updateJoystickColor = new utils.k.n(detectMobileDevice, new utils.k.r(0, 0, 256, 256));
         this.jg = Array(16);
