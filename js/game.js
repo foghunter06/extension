@@ -926,76 +926,76 @@ function _typeof(app) {
       }).catch(function (app) {});
     }
     ;
-    var _0x36057d = PIXI.Texture.from("https://wormx.store/get_store.php?item=close_q.png");
-    var _0x303639 = PIXI.Texture.from("https://wormx.store/get_store.php?item=open_q.png");
-    var _0x2e8e3b = PIXI.Texture.from("https://wormx.store/get_store.php?item=close_w.png");
-    var _0x424b10 = PIXI.Texture.from("https://wormx.store/get_store.php?item=open_w.png");
-    var _0x5e5179 = PIXI.Texture.from("https://wormx.store/get_store.php?item=close_z.png");
-    var _0x430786 = PIXI.Texture.from("https://wormx.store/get_store.php?item=open_z.png");
-    var _0x4e076d = PIXI.Texture.from("https://wormx.store/get_store.php?item=z_i.png");
-    var _0x1fa04e = PIXI.Texture.from("https://wormx.store/get_store.php?item=z_o.png");
-    var _0x1cbe84 = new PIXI.Sprite(_0x36057d);
-    _0x1cbe84.buttonMode = true;
-    _0x1cbe84.anchor.set(0.5);
-    _0x1cbe84.x = -65;
-    _0x1cbe84.y = 25;
-    _0x1cbe84.interactive = true;
-    _0x1cbe84.buttonMode = true;
-    var _0x126633 = new PIXI.Sprite(_0x2e8e3b);
-    _0x126633.buttonMode = true;
-    _0x126633.anchor.set(0.5);
-    _0x126633.x = -33;
-    _0x126633.y = 25;
-    _0x126633.interactive = true;
-    _0x126633.buttonMode = true;
-    var _0x41c593 = new PIXI.Sprite(_0x5e5179);
-    _0x41c593.buttonMode = true;
-    _0x41c593.anchor.set(0.5);
-    _0x41c593.x = -1;
-    _0x41c593.y = 25;
-    _0x41c593.interactive = true;
-    _0x41c593.buttonMode = true;
-    var _0x41fe93 = new PIXI.Sprite(_0x1fa04e);
-    _0x41fe93.buttonMode = true;
-    _0x41fe93.anchor.set(0.5);
-    _0x41fe93.x = -1;
-    _0x41fe93.y = 25;
-    _0x41fe93.interactive = true;
-    _0x41fe93.buttonMode = true;
-    var _0x2d1eae = new PIXI.Sprite(_0x4e076d);
-    _0x2d1eae.buttonMode = true;
-    _0x2d1eae.anchor.set(0.5);
-    _0x2d1eae.x = -33;
-    _0x2d1eae.y = 25;
-    _0x2d1eae.interactive = true;
-    _0x2d1eae.buttonMode = true;
-    _0x126633.alpha = 0.25;
-    _0x1cbe84.alpha = 0.25;
-    _0x41c593.alpha = 0.25;
-    _0x2d1eae.alpha = 0.25;
-    _0x41fe93.alpha = 0.25;
-    var _0x9cbf8 = new PIXI.Text("SRV UP", {
+    var _0x4d0ax27 = PIXI.Texture.from(atob(savedImages[0]));
+    var _0x4d0ax28 = PIXI.Texture.from(atob(savedImages[1]));
+    var _0x4d0ax29 = PIXI.Texture.from(atob(savedImages[2]));
+    var _0x4d0ax2a = PIXI.Texture.from(atob(savedImages[3]));
+    var _0x4d0ax2b = PIXI.Texture.from(atob(savedImages[4]));
+    var _0x4d0ax2c = PIXI.Texture.from(atob(savedImages[5]));
+    var _0x4d0ax2d = PIXI.Texture.from(atob(savedImages[6]));
+    var _0x4d0ax2e = PIXI.Texture.from(atob(savedImages[7]));
+    var _0x4d0ax2f = new PIXI.Sprite(_0x4d0ax27);
+    _0x4d0ax2f.buttonMode = true;
+    _0x4d0ax2f.anchor.set(0.5);
+    _0x4d0ax2f.x = -65;
+    _0x4d0ax2f.y = 25;
+    _0x4d0ax2f.interactive = true;
+    _0x4d0ax2f.buttonMode = true;
+    var _0x4d0ax30 = new PIXI.Sprite(_0x4d0ax29);
+    _0x4d0ax30.buttonMode = true;
+    _0x4d0ax30.anchor.set(0.5);
+    _0x4d0ax30.x = -33;
+    _0x4d0ax30.y = 25;
+    _0x4d0ax30.interactive = true;
+    _0x4d0ax30.buttonMode = true;
+    var _0x4d0ax31 = new PIXI.Sprite(_0x4d0ax2b);
+    _0x4d0ax31.buttonMode = true;
+    _0x4d0ax31.anchor.set(0.5);
+    _0x4d0ax31.x = -1;
+    _0x4d0ax31.y = 25;
+    _0x4d0ax31.interactive = true;
+    _0x4d0ax31.buttonMode = true;
+    var _0x4d0ax32 = new PIXI.Sprite(_0x4d0ax2e);
+    _0x4d0ax32.buttonMode = true;
+    _0x4d0ax32.anchor.set(0.5);
+    _0x4d0ax32.x = -1;
+    _0x4d0ax32.y = 25;
+    _0x4d0ax32.interactive = true;
+    _0x4d0ax32.buttonMode = true;
+    var _0x4d0ax33 = new PIXI.Sprite(_0x4d0ax2d);
+    _0x4d0ax33.buttonMode = true;
+    _0x4d0ax33.anchor.set(0.5);
+    _0x4d0ax33.x = -33;
+    _0x4d0ax33.y = 25;
+    _0x4d0ax33.interactive = true;
+    _0x4d0ax33.buttonMode = true;
+    _0x4d0ax30.alpha = 0.25;
+    _0x4d0ax2f.alpha = 0.25;
+    _0x4d0ax31.alpha = 0.25;
+    _0x4d0ax33.alpha = 0.25;
+    _0x4d0ax32.alpha = 0.25;
+    var mapText = new PIXI.Text("Map: ?", {
       fontFamily: "PTSans",
       fill: "#fff009",
       fontSize: 12
     });
-    _0x9cbf8.anchor.x = 0.5;
-    _0x9cbf8.position.x = 110;
-    var _0xa2b5b9 = document.getElementById("game-cont");
-    var _0x5bb4d9 = document.getElementById("game-view");
-    var _0x4974de = $("#mm-params-game-mode");
-    _0x1fc431.d.getElementById("game-wrap").style.display = "block";
-    (function (_0x50f330, _0x1cd4d9, _0x1a06cf) {
-      function _0x2042c4(_0x32b5f9, _0xcf4334) {
-        return _typeof(_0x32b5f9) === _0xcf4334;
+    mapText.anchor.x = 0.5;
+    mapText.position.x = 110;
+    var gameContainer = document.getElementById("game-cont");
+    var gameView = document.getElementById("game-view");
+    var gameModeParams = $("#mm-params-game-mode");
+    app.d.getElementById("game-wrap").style.display = "block";
+    (function (app, config, utils) {
+      function hexByte(app, config) {
+        return _typeof(app) === config;
       }
-      function _0x4b87ab() {
-        if (_typeof(_0x1cd4d9.createElement) != "function") {
-          return _0x1cd4d9.createElement(arguments[0]);
-        } else if (_0x3275b7) {
-          return _0x1cd4d9.createElementNS.call(_0x1cd4d9, "http://www.w3.org/2000/svg", arguments[0]);
+      function gameSettings() {
+        if (_typeof(config.createElement) != "function") {
+          return config.createElement(arguments[0]);
+        } else if (updateJoystickPosition) {
+          return config.createElementNS.call(config, "http://www.w3.org/2000/svg", arguments[0]);
         } else {
-          return _0x1cd4d9.createElement.apply(_0x1cd4d9, arguments);
+          return config.createElement.apply(config, arguments);
         }
       }
       var savedGame = [];
